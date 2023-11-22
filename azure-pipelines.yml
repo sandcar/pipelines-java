@@ -23,16 +23,16 @@ stages:
               
               echo Hello world
   - stage: Restore
-      dependsOn:Build
+    dependsOn: Build
     jobs:
-      - job: Restore
-        displayName: Restore sample
-        cancelTimeoutInMinutes: 1
-        steps:
-        - task: CmdLine@2
-          inputs:
-            script: |
-              echo restoring sample
-              
-              echo Hello world             
+    - job: Restore
+      displayName: Restore sample
+      cancelTimeoutInMinutes: 1
+      steps:
+      - task: CmdLine@2
+        inputs:
+          script: |
+            echo restoring sample
+            
+            echo Hello world             
 
