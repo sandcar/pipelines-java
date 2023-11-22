@@ -23,7 +23,7 @@ stages:
               
               echo Hello world
   - stage: Restore
-    dependsOn: Build
+    dependsOn: []
     jobs:
     - job: Restore
       displayName: Restore sample
